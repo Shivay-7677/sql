@@ -1,0 +1,6 @@
+#List houses with guest rooms
+
+SELECT count(guestroom)
+
+FROM `windy-cedar-451319-q6.Housing_data.Housing`
+Where guestroom=true;
