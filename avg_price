@@ -1,0 +1,5 @@
+-- Find the average price of houses.
+
+SELECT avg(price) 
+FROM `windy-cedar-451319-q6.Housing_data.Housing`
+GROUP BY area
