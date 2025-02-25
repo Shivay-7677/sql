@@ -1,0 +1,7 @@
+#List the price of houses located on the main road.
+
+
+SELECT  price
+FROM `windy-cedar-451319-q6.Housing_data.Housing`
+WHERE mainroad=true;
+ 
