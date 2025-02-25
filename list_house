@@ -1,0 +1,3 @@
+SELECT * 
+FROM `windy-cedar-451319-q6.Housing_data.Housing`
+ WHERE bedrooms > 3;
