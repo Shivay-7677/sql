@@ -1,0 +1,6 @@
+-- Count the number of houses with more than 2 parking spaces.
+
+
+SELECT COUNT(*) AS houses_with_more_than_2_parking_spaces
+FROM  `windy-cedar-451319-q6.Housing_data.Housing`
+WHERE parking > 2;
