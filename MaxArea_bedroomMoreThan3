@@ -1,0 +1,8 @@
+
+Find the maximum area of houses with more than 3 bedrooms.
+
+
+
+SELECT MAX(area) AS max_area
+FROM  `windy-cedar-451319-q6.Housing_data.Housing`
+WHERE bedrooms > 3;
