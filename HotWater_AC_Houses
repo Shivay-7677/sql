@@ -1,0 +1,6 @@
+-- Find houses with both hot water heating and air conditioning.
+
+
+SELECT price, area, bedrooms, bathrooms, stories, mainroad, guestroom, basement, parking, prefarea, furnishingstatus
+FROM  `windy-cedar-451319-q6.Housing_data.Housing`
+WHERE hotwaterheating = true AND airconditioning = true;
