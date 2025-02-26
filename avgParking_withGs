@@ -1,0 +1,5 @@
+-- Calculate the average number of parking spaces for houses with guest rooms.
+
+SELECT AVG(parking) AS avg_parking_spaces
+FROM  `windy-cedar-451319-q6.Housing_data.Housing`
+WHERE guestroom = true;
