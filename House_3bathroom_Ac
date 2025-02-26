@@ -1,0 +1,8 @@
+
+--List houses with at least 3 bathrooms and air conditioning.
+
+
+SELECT price, area, bedrooms, stories, mainroad, guestroom, basement, hotwaterheating, parking, prefarea, furnishingstatus
+
+FROM  `windy-cedar-451319-q6.Housing_data.Housing`
+WHERE bathrooms >= 3 AND airconditioning = true;
