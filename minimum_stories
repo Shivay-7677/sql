@@ -1,0 +1,5 @@
+# Find the minimum number of stories in a house.
+
+
+SELECT MIN(stories) AS min_stories
+FROM `windy-cedar-451319-q6.Housing_data.Housing`;
