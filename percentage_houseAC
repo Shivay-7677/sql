@@ -1,0 +1,6 @@
+Calculate the percentage of houses with air conditioning.
+
+
+SELECT 
+    (COUNT(CASE WHEN airconditioning = true THEN 1 END) * 100.0 / COUNT(*)) AS percent_with_ac
+FROM `windy-cedar-451319-q6.Housing_data.Housing`;
