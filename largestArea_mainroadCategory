@@ -1,0 +1,8 @@
+-- Identify houses that have the largest area for each mainroad category.
+
+
+SELECT h.price, h.area, h.bedrooms
+FROM `windy-cedar-451319-q6.Housing_data.Housing` as h
+INNER JOIN (SELECT mainroad, MAX(area) AS max_area FROM `windy-cedar-451319-q6.Housing_data.Housing` as g GROUP BY mainroad) sub
+ON h.mainroad = sub.mainroad
+WHERE h.area = sub.max_area;
