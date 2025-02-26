@@ -1,0 +1,10 @@
+-- Identify the houses with the highest price in each bedroom category, considering only those houses with more than 1 bathroom.
+
+SELECT h.price, h.area
+FROM `windy-cedar-451319-q6.Housing_data.Housing`  as h
+INNER JOIN (SELECT bedrooms, MAX(price) AS max_price
+            FROM `windy-cedar-451319-q6.Housing_data.Housing` as g
+            WHERE bathrooms > 1
+            GROUP BY bedrooms) sub
+ON h.bedrooms = sub.bedrooms
+WHERE h.price = sub.max_price;
