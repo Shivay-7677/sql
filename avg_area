@@ -1,0 +1,5 @@
+#Find the average area of houses with more than 2 stories
+
+SELECT AVG(area) AS average_area
+FROM `windy-cedar-451319-q6.Housing_data.Housing`
+WHERE stories > 2;
