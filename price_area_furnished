@@ -1,0 +1,10 @@
+#List all fully furnished houses.
+
+
+
+SELECT price,area
+
+FROM `windy-cedar-451319-q6.Housing_data.Housing`
+
+WHERE furnishingstatus = 'furnished';
+
