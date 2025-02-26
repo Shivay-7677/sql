@@ -1,4 +1,4 @@
--- Identify houses that have the largest area for each mainroad category.
+-- List houses that have the largest area for each mainroad category.
 
 
 SELECT h.price, h.area, h.bedrooms
