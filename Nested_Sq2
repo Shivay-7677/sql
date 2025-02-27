@@ -1,0 +1,9 @@
+-- List all houses that have a price less than the average price of houses located on the main road and have air conditioning
+
+SELECT *
+
+FROM `windy-cedar-451319-q6.Housing_data.Housing`
+WHERE price < (SELECT AVG(price) 
+               
+FROM `windy-cedar-451319-q6.Housing_data.Housing`
+               WHERE mainroad = true AND airconditioning = true);
