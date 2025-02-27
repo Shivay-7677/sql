@@ -1,0 +1,13 @@
+
+-- List houses in non-preferred areas with more stories than the average number of stories for houses in preferred areas and have a basement
+
+SELECT *
+
+
+FROM `windy-cedar-451319-q6.Housing_data.Housing`
+WHERE prefarea = true 
+      AND stories > (SELECT AVG(stories) 
+                     
+FROM `windy-cedar-451319-q6.Housing_data.Housing`
+
+                     WHERE prefarea = true AND basement = true);
