@@ -1,0 +1,7 @@
+-- Find the houses with the highest price among those with more bedrooms than the average number of bedrooms
+
+SELECT *
+FROM `windy-cedar-451319-q6.Housing_data.Housing`
+WHERE price = (SELECT MAX(price) 
+               FROM `windy-cedar-451319-q6.Housing_data.Housing`
+               WHERE bedrooms > (SELECT AVG(bedrooms) FROM `windy-cedar-451319-q6.Housing_data.Housing`));
