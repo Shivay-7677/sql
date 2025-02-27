@@ -1,0 +1,7 @@
+-- List houses that have more parking spots than the average number of parking spots for houses with a basement in preferred areas
+
+SELECT *
+FROM `windy-cedar-451319-q6.Housing_data.Housing`
+WHERE parking > (SELECT AVG(parking) 
+                 FROM `windy-cedar-451319-q6.Housing_data.Housing`
+                 WHERE basement = true AND prefarea = true);
