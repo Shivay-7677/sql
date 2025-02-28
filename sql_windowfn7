@@ -1,0 +1,9 @@
+-- Determining the Maximum Price in Each Area
+-- Problem Statement: Find the maximum price of houses for each area.
+
+
+SELECT 
+    *,
+    MAX(price) OVER (PARTITION BY area) AS max_price_in_area
+FROM 
+    `windy-cedar-451319-q6.Housing_data.Housing`;
