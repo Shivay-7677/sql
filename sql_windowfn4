@@ -1,0 +1,10 @@
+-- Lagging Prices to Compare with Previous House
+-- Problem Statement: Compare the price of each house with the price of the previous one in the same area.
+
+
+SELECT 
+    *,
+    LAG(price) OVER (PARTITION BY area ORDER BY price) AS previous_price
+FROM 
+    
+     `windy-cedar-451319-q6.Housing_data.Housing`;
