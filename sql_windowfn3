@@ -1,0 +1,9 @@
+-- Finding the Percentage of Total Price for Each House
+-- Problem Statement: Calculate the percentage contribution of each house's price to the total price.
+
+
+SELECT 
+    *,
+    price * 100.0 / SUM(price) OVER () AS percentage_of_total_price
+FROM 
+     `windy-cedar-451319-q6.Housing_data.Housing`;
